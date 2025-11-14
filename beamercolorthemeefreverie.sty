@@ -1,0 +1,126 @@
+% Beamer Color Theme using the ef-reverie Palette
+% Based on ef-reverie Emacs theme by Protesilaos Stavrou
+% https://github.com/protesilaos/ef-themes
+%
+% Adapted from beamercolorthemesolarized.sty
+% by Jeffrey B. Arnold
+% https://github.com/jrnold/beamercolorthemesolarized
+
+\ProvidesPackage{beamercolorthemeefreverie}[2025/11/14 1.0.0 ef-reverie color theme for beamer]
+\RequirePackage{etoolbox}
+
+% ef-reverie palette - light theme with gold and nuanced colors
+% Basic values
+\definecolor{efreverieMainBg}{HTML}{f3eddf}      % bg-main
+\definecolor{efreverieMainFg}{HTML}{4f204f}      % fg-main
+\definecolor{efreverieDimBg}{HTML}{e5d6d4}       % bg-dim
+\definecolor{efreverieDimFg}{HTML}{6f6877}       % fg-dim
+\definecolor{efreverieAltBg}{HTML}{d9cac8}       % bg-alt
+\definecolor{efreverieAltFg}{HTML}{55447f}       % fg-alt
+
+\definecolor{efreverieActiveBg}{HTML}{b9aaa8}    % bg-active
+\definecolor{efreverieInactiveBg}{HTML}{ede4da}  % bg-inactive
+
+% Basic hues for foreground values
+\definecolor{efreverieRed}{HTML}{ba2d2f}
+\definecolor{efreverieRedWarmer}{HTML}{b21f00}
+\definecolor{efreverieRedCooler}{HTML}{a83058}
+\definecolor{efreverieGreen}{HTML}{007a0a}
+\definecolor{efreverieGreenWarmer}{HTML}{5a7400}
+\definecolor{efreverieYellow}{HTML}{87591f}
+\definecolor{efreverieYellowWarmer}{HTML}{a05900}
+\definecolor{efreverieYellowCooler}{HTML}{906045}
+\definecolor{efreverieBlue}{HTML}{375cc6}
+\definecolor{efreverieBlueWarmer}{HTML}{5059c0}
+\definecolor{efreverieMagenta}{HTML}{9f4e74}
+\definecolor{efreverieMagentaWarmer}{HTML}{a73080}
+\definecolor{efreverieMagentaCooler}{HTML}{7755b4}
+\definecolor{efreverieCyan}{HTML}{3060af}
+\definecolor{efreverieCyanWarmer}{HTML}{4f60a0}
+
+% Special hues
+\definecolor{efreverieModeLine}{HTML}{d1b0df}     % bg-mode-line
+\definecolor{efreverieModeLineFg}{HTML}{523044}  % fg-mode-line
+\definecolor{efreverieHlLine}{HTML}{e7d9e0}      % bg-hl-line
+\definecolor{efreverieParen}{HTML}{bf9fbf}       % bg-paren
+\definecolor{efreverieBorder}{HTML}{c5afb6}      % border
+\definecolor{efreverieCursor}{HTML}{9d5744}      % cursor
+
+% Set accent color (using yellow-cooler as default, matching theme's link color)
+\colorlet{efreverieAccent}{efreverieYellowCooler}
+
+\mode<presentation>
+
+% Normal text
+\setbeamercolor{normal text}{fg=efreverieMainFg, bg=efreverieMainBg}
+\setbeamercolor{alerted text}{fg=efreverieAccent}
+\setbeamercolor{example text}{fg=efreverieDimFg, bg=efreverieDimBg}
+
+% Header and footer
+\setbeamercolor{footline}{bg=efreverieDimBg, fg=efreverieDimFg}
+\setbeamercolor{headline}{bg=efreverieAltBg, fg=efreverieAltFg}
+
+% Titles - using magenta-warmer for prominence
+\setbeamercolor*{titlelike}{fg=efreverieMagentaWarmer}
+\setbeamercolor*{frametitle}{fg=efreverieMagentaWarmer}
+\setbeamercolor*{title}{fg=efreverieMagentaWarmer}
+
+% Structure elements
+\setbeamercolor*{structure}{bg=efreverieAltBg, fg=efreverieAltFg}
+
+% Palette (for navigation, sidebar, etc.)
+\setbeamercolor*{palette primary}{bg=efreverieAltBg, fg=efreverieAltFg}
+\setbeamercolor*{palette secondary}{bg=efreverieAltBg, fg=efreverieAltFg}
+\setbeamercolor*{palette tertiary}{bg=efreverieAltBg, fg=efreverieAltFg}
+\setbeamercolor*{palette quaternary}{bg=efreverieAltBg, fg=efreverieAltFg}
+
+% Blocks
+\setbeamercolor{block title}{fg=efreverieMagentaWarmer, bg=efreverieDimBg}
+\setbeamercolor{block body}{parent=normal text, bg=efreverieDimBg}
+
+% Alert blocks (using red)
+\setbeamercolor{block title alerted}{fg=efreverieRed, bg=efreverieDimBg}
+\setbeamercolor{block body alerted}{parent=normal text, bg=efreverieDimBg}
+
+% Example blocks (using green)
+\setbeamercolor{block title example}{fg=efreverieGreen, bg=efreverieDimBg}
+\setbeamercolor{block body example}{parent=normal text, bg=efreverieDimBg}
+
+% Sidebar (if used)
+\setbeamercolor*{sidebar}{parent=headline}
+\setbeamercolor*{palette sidebar primary}{bg=efreverieAltBg, fg=efreverieAltFg}
+\setbeamercolor*{palette sidebar secondary}{bg=efreverieAltBg, fg=efreverieAltFg}
+\setbeamercolor*{palette sidebar tertiary}{bg=efreverieAltBg, fg=efreverieAltFg}
+\setbeamercolor*{palette sidebar quaternary}{bg=efreverieAltBg, fg=efreverieAltFg}
+
+% Separation lines
+\setbeamercolor{separation line}{fg=efreverieBorder}
+\setbeamercolor{fine separation line}{fg=efreverieBorder}
+
+% Navigation
+\setbeamercolor*{section in sidebar shaded}{parent=palette sidebar primary}
+\setbeamercolor*{section in sidebar}{parent=palette sidebar primary, fg=efreverieActiveBg}
+\setbeamercolor*{subsection in sidebar}{parent=section in sidebar}
+\setbeamercolor*{subsection in sidebar shaded}{parent=section in sidebar shaded}
+
+% Items (bullet points, enumerate)
+\setbeamercolor{item}{fg=efreverieAccent}
+\setbeamercolor{subitem}{fg=efreverieCyan}
+\setbeamercolor{subsubitem}{fg=efreverieCyanWarmer}
+
+% Bibliography
+\setbeamercolor{bibliography entry author}{fg=efreverieMainFg}
+\setbeamercolor{bibliography entry title}{fg=efreverieMagenta}
+\setbeamercolor{bibliography entry location}{fg=efreverieDimFg}
+\setbeamercolor{bibliography entry note}{fg=efreverieDimFg}
+
+% Table of contents
+\setbeamercolor{section in toc}{fg=efreverieMainFg}
+\setbeamercolor{subsection in toc}{fg=efreverieDimFg}
+
+% Caption
+\setbeamercolor{caption}{fg=efreverieDimFg}
+\setbeamercolor{caption name}{fg=efreverieMainFg}
+
+\mode
+<all>
