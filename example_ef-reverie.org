@@ -1,0 +1,67 @@
+#+title: There Is No Largest Prime Number
+#+author: Euclid of Alexandria
+#+email: euclid@alexandria.edu
+#+date: [ISPN ’80] 27th International Symposium of Prime Numbers
+#+options: H:2 toc:t email:t
+#+language: en
+#+options: ':t
+
+#+latex_class: beamer
+#+columns: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
+#+beamer_theme: default
+#+beamer_color_theme: efreverie
+#+beamer_font_theme:
+#+beamer_inner_theme:
+#+beamer_outer_theme:
+#+latex_class_options: [presentation,aspectratio=169]
+
+* Motivation
+** What Are Prime Numbers?
+
+*** What Are Prime Numbers?
+A \alert{prime number} is a number that has exactly two divisors.
+
+*** Example
+- 2 is prime (two divisors: 1 and 2). \pause
+- 3 is prime (two divisors: 1 and 3). \pause
+- 4 is not prime (*three* divisors: 1, 2, and 4). 
+
+* Results
+
+** There Is No Largest Prime Number
+#+latex: \framesubtitle{The proof uses \textit{reductio ad absurdum}.}
+
+#+begin_theorem
+There is no largest prime number.
+#+end_theorem
+
+#+begin_proof
+@@latex:\begin{enumerate}@@
+@@latex:\item<1->@@ Suppose $p$ were the largest prime number.
+@@latex:\item<2->@@ Let $q$ be the product of the first $p$ numbers.
+@@latex:\item<3->@@ Then $q + 1$ is not divisible by any of them.
+@@latex:\item<4->@@ Thus $q + 1$ is also prime and greater than $p$.\qedhere
+@@latex:\end{enumerate}@@
+#+end_proof
+
+@@latex:\uncover<4->{The proof used \textit{reductio ad absurdum}.}@@
+
+* Discussion
+
+** What’s Still To Do?
+
+*** :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+
+**** Answered Questions
+How many primes are there? \pause
+
+***  :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+
+**** Open Questions
+Is every even number the sum of two primes?
