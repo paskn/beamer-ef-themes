@@ -1,0 +1,15 @@
+Beamer color themes based on Protesilaos Stavrou's [[https://github.com/protesilaos/ef-themes][ef-themes]].
+
+Currently, this includes:
+
+- =ef-reverie= - =beamercolorthemeefreverie.sty=
+
+* How to use
+
+1. Copy a file the color theme (=*.sty=) into the same directory
+   storing your slides.
+2. In the slides file, add:
+
+   #+begin_src shell
+   \usecolortheme{efreverie}
+#+end_src
